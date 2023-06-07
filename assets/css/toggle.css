@@ -1,0 +1,40 @@
+.toggleSwitch {
+	width: 75px;
+	height: 30px;
+	display: block;
+	position: relative;
+	border-radius: 30px;
+	background-color: #000000;
+	box-shadow: 0 0 16px 3px rgba(0 0 0 / 15%);
+	cursor: pointer;
+	margin-top: 0.5rem;
+	margin-left: 0.5rem;
+  }
+  
+  .toggleSwitch .toggleButton {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 50%;
+	left: 4px;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	background: #ffffff;
+  }
+  
+  #toggle:checked ~ .toggleSwitch {
+	background: #ffffff;
+  }
+  
+  #toggle:checked ~ .toggleSwitch .toggleButton {
+	left: calc(100% - 30px);
+	background: #000000;
+  }
+  
+  .toggleSwitch, .toggleButton {
+	transition: all 0.2s ease-in;
+  }
+
+  .toggleSwitch {
+	margin-bottom: 0;
+  }
