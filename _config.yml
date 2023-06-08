@@ -214,7 +214,7 @@ footer-hover-col-dark: "#0085A1"
 # See more details about the parameters below at https://utteranc.es/
 utterances:
  repository: dustjq1004/comments # GitHub username/repository eg. "daattali/beautiful-jekyll"
- issue-term: path   # Mapping between blog posts and GitHub issues
+ issue-term: pathname   # Mapping between blog posts and GitHub issues
  theme: github-light # Utterances theme
  label: comments # Label that will be assigned to GitHub Issues created by Utterances
 
