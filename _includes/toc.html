@@ -66,7 +66,7 @@
     {% if include.skipNoIDs %}
         {% capture deprecation_warnings %}{{ deprecation_warnings }}<!-- jekyll-toc :: "skipNoIDs" has been deprecated, use "skip_no_ids" instead -->{{ newline }}{% endcapture %}
     {% endif %}
-
+    
     {% capture jekyll_toc %}{% endcapture %}
     {% assign orderedList = include.ordered | default: false %}
     {% assign baseURL = include.base_url | default: include.baseurl | default: '' %}
@@ -78,7 +78,7 @@
     {% assign firstHeader = true %}
     {% assign currLevel = 0 %}
     {% assign lastLevel = 0 %}
-
+   
     {% capture listModifier %}{% if orderedList %}ol{% else %}div{% endif %} style="margin-left:20px;" {% endcapture %}
     {% for node in nodes %}
         {% if node == "" %}
