@@ -22,6 +22,7 @@ common-js:
   - "/assets/js/beautifuljekyll.js"
   - "/assets/js/toggle.js"
   - "/assets/js/toc.js"
+  - "/assets/js/custom.js"
 ---
 
 <!DOCTYPE html>
@@ -34,6 +35,9 @@ common-js:
   {% include gtm_body.html %}
   
   {% include social-networks-links.html %}
+  {% if page.layout != 'home' and page.url != '/aboutme/' %}
+  {% include sidebar.html %}
+  {% endif %}
   
   {% include nav.html %}
 

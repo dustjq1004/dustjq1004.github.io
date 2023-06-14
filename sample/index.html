@@ -2,6 +2,7 @@
 layout: page
 title: Sample
 subtitle: 포스팅 예시
+categoris: sample
 ---
 
 {% assign posts = paginator.posts | default: site.posts %}
@@ -10,8 +11,14 @@ subtitle: 포스팅 예시
 
 <ul class="posts-list list-unstyled" role="list">
   {% for post in posts %}
-    {% if post.blog == "sample" %}
-      <li class="post-preview">
+    {% if post.categories[0] == "sample" %}
+      <li class="post-preview"
+      {% if post.tags %}
+        {% for tag in post.tags %}
+          data-{{ tag }}
+        {% endfor %}
+      {% endif %}
+      >
         <article>
 
           {%- capture thumbnail -%}

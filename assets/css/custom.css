@@ -1,7 +1,8 @@
 .side-items {
     position: fixed;
-    left: 20px;
+    left: 10px;
     top: 60px;
+    z-index: 1;
 }
 
 .side-items a {
@@ -15,4 +16,36 @@
     position: relative;
     vertical-align: middle;
     width: 0.5em;
+}
+
+
+/* sidebar - tags */
+.sidebar-tags {
+    position: fixed;
+    left: 10px;
+    top: 250px;
+    z-index: 1;
+}
+
+.nav-item a {
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .sidebar-tags {display: none;}
+}
+
+/* bootstrap nav-link custom */
+.nav-custom-link {
+    font-size: 1rem;
+    /* border: 1px solid white; */
+}
+
+.nav-custom-link:hover {
+    /* border: 1px solid black; */
+    
 }

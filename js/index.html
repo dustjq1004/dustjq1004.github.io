@@ -2,6 +2,7 @@
 layout: page
 title: Javascript
 subtitle: 모던 자바스크립트, Node.js, Next.js, Express.js
+categoris: js
 ---
 
 {% assign posts = paginator.posts | default: site.posts %}
@@ -10,7 +11,7 @@ subtitle: 모던 자바스크립트, Node.js, Next.js, Express.js
 
 <ul class="posts-list list-unstyled" role="list">
   {% for post in posts %}
-    {% if post.blog == "js" %}
+    {% if post.categories[0] == "js" %}
       <li class="post-preview">
         <article>
 

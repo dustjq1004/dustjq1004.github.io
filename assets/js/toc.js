@@ -7,7 +7,7 @@ tocItems.forEach((item, index) => item.dataset.index = index);
 tags.forEach((tag, index) => tag.dataset.index = index);
 
 
-toc.addEventListener('click', e => {
+toc?.addEventListener('click', e => {
     if (e.target.matches('.toc-title')) {
         tocItems.forEach(target => target.classList.remove('toc-active'));
         tocItems[e.target.dataset.index].classList.add('toc-active');

@@ -1,0 +1,33 @@
+{% assign blog = page.url | split:'/' %}
+{%- capture site_tags -%}
+    {%- for tag in site.tags -%}
+        {% assign cnt = 0 %}
+        {%- for post in tag[1] -%}
+            {% if post.categories[0] == blog[1] %}
+                {% assign cnt = cnt | plus:1 %}
+            {% endif %}
+        {%- endfor -%}
+        {% if cnt > 0 %} 
+            {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%}
+        {% endif %}
+    {%- endfor -%}
+{%- endcapture -%}
+{%- assign tags_list = site_tags | split:',' | sort -%}
+
+{% if tags_list.size > 0 %}
+<div id="sidebar" class="sidebar-tags ml-1">
+    <h3>Menus</h3> 
+    <div class="navbar-nav flex-column mt-2">
+        {%- for tag in tags_list -%}
+            <span class="nav-item">
+                {% if page.categories %}
+                <a href="/{{ page.categories }}/?tag={{- tag -}}" class="nav-custom-link p-1 nav-link text-black sidebar-link">&nbsp;{{- tag -}}</a>
+                {% else %}
+                <a href="?tag={{- tag -}}" class="nav-custom-link p-1 nav-link text-black sidebar-link">&nbsp;{{- tag -}}</a>
+                {% endif %}
+            </span>
+        {%- endfor -%}
+    </div>
+</div>
+{% endif %}
+ 
