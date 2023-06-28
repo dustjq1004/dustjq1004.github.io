@@ -19,12 +19,24 @@
 }
 
 
+
 /* sidebar - tags */
 .sidebar-tags {
     position: fixed;
-    left: 10px;
-    top: 250px;
+    left: 50px;
+    top: 33%;
     z-index: 1;
+}
+
+.sidebar-nav {
+    height: 120px;
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.sidebar-nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
 }
 
 .nav-item a {
@@ -39,13 +51,28 @@
     .sidebar-tags {display: none;}
 }
 
+
+
+
 /* bootstrap nav-link custom */
-.nav-custom-link {
-    font-size: 1rem;
-    /* border: 1px solid white; */
+/* .nav-custom-link {
+    transition: font-size 0.3s ease-in-out;
+    border: 1px solid white;
+} */
+
+.nav-scroll {
+    opacity: 1;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.nav-custom-link:hover {
-    /* border: 1px solid black; */
-    
+/*
+********************************
+content css styles
+********************************
+*/
+
+.content {
+    margin: 0 auto;
+    max-width: 1000px;
 }

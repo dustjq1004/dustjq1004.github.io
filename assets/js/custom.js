@@ -17,7 +17,6 @@ function filterByTagName(tagName) {
     $('.hidden').removeClass('hidden');
     $('.post-preview').each((index, elem) => {
         if (!elem.hasAttribute(`data-${tagName}`)) {
-            console.log(tagName)
             $(elem).addClass('hidden');
         }
     });
@@ -29,4 +28,53 @@ $(document).ready(function() {
         filterByTagName(currentTag);
     }
 });
+
+$('#sidebar-nav').scroll(function() {
+    var container = $(this);
+    var containerHeight = container.height();
+    console.log($('#sidebar-nav').scrollTop());
+    $('.nav-scroll').each(function() {
+        var element = $(this);
+        var elementOffset = element.offset().top - container.offset().top;
+        var elementHeight = element.outerHeight();
+
+        // 요소의 중심 위치 계산
+        var elementCenter = elementOffset + elementHeight / 2;
+
+        // 스크롤 위치에 따른 투명도 조절
+        var distanceFromCenter = Math.abs(containerHeight / 2 - elementCenter);
+        var maxDistance = containerHeight / 2;
+
+        // 투명도
+        var opacity = 1 - (distanceFromCenter / maxDistance);
+
+        // 폰트사이즈
+        var fontSizeRatio = 1.4 - (distanceFromCenter / maxDistance) * 0.5; // 최대 크기 차이 0.5
+        var fontSize = fontSizeRatio + 'rem';
+
+        element.css('opacity', opacity);
+        element.css('font-size', fontSize);
+    });
+});
+  
+// 페이지 로드 시 초기 스크롤 위치에 따른 투명도, 폰트 사이즈 설정
+$('#sidebar-nav').trigger('scroll');
+  
+
+// 스크롤 위치 저장
+$(window).on('beforeunload', function() {
+    localStorage.setItem('scrollPosition', $('#sidebar-nav').scrollTop());
+});
+  
+$(window).on('load', function() {
+    var scrollPosition = localStorage.getItem('scrollPosition');
+    console.log(`scrollPosition: ${scrollPosition}`);
+    if (scrollPosition) {
+        $('#sidebar-nav').scrollTop(scrollPosition);
+        localStorage.removeItem('scrollPosition');
+    }
+});
+  
+  
+  
   
