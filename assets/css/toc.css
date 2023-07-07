@@ -3,15 +3,10 @@ layout: null
 ---
 
 #toc {
-  position: fixed;
-  right: 0px;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  margin-right: 0px;
-  /* border-bottom: 2px solid #f8c8c8; */
+  position: fixed; 
+  right: 0;
 }
+
 
 #toc h3 {
   left: 0px;
@@ -42,15 +37,9 @@ layout: null
   }
 }
 
-@media (min-width: 85em){
-  .toc {
-    width: 300px;
-    display: block;
-  }
-}
 @media (min-width: 95em){
   .toc {
-    width: 360px;
+    width: 300px;
     display: block;
   }
 }

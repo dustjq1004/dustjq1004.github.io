@@ -37,7 +37,7 @@ $('#sidebar-nav').scroll(function() {
         var element = $(this);
         var elementOffset = element.offset().top - container.offset().top;
         var elementHeight = element.outerHeight();
-
+        
         // 요소의 중심 위치 계산
         var elementCenter = elementOffset + elementHeight / 2;
 
@@ -52,8 +52,10 @@ $('#sidebar-nav').scroll(function() {
         var fontSizeRatio = 1.4 - (distanceFromCenter / maxDistance) * 0.5; // 최대 크기 차이 0.5
         var fontSize = fontSizeRatio + 'rem';
 
-        element.css('opacity', opacity);
-        element.css('font-size', fontSize);
+        if(element.data('tag') === currentTag) element.addClass('selected');
+        else element.removeClass('selected');
+        //element.css('opacity', opacity);
+        //element.css('font-size', fontSize);
     });
 });
   
