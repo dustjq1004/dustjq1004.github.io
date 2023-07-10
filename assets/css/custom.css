@@ -1,3 +1,14 @@
+
+a {
+    transition: color 0.3s ease-in-out;
+}
+
+/*
+********************************
+sidebar css styles
+********************************
+*/
+
 .side-items {
     position: fixed;
     left: 10px;
@@ -9,26 +20,23 @@
     color: black;
 }
 
-.fa-stack {
-    display: inline-block;
-    height: 2em;
-    /* line-height: 2em; */
-    position: relative;
-    vertical-align: middle;
-    width: 0.5em;
-}
-
 /* sidebar - tags */
+
 .sidebar-tags {
     position: fixed;
     left: 50px;
-    top: 33%;
+    top: 31%;
     z-index: 1;
+}
+
+.sidebar-tags h4 {
+    margin-top: 1rem;
 }
 
 .sidebar-nav {
     height: 160px;
     overflow: scroll;
+    scroll-behavior: smooth;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
@@ -49,14 +57,7 @@
     .sidebar-tags {display: none;}
 }
 
-
-
-
 /* bootstrap nav-link custom */
-/* .nav-custom-link {
-    transition: font-size 0.3s ease-in-out;
-    border: 1px solid white;
-} */
 
 .nav-scroll {
     opacity: 0.4;
@@ -81,4 +82,16 @@ content css styles
 .content {
     margin: 0 auto;
     max-width: 1000px;
+}
+
+
+
+/*
+********************************
+footer css styles
+********************************
+*/
+
+footer a {
+    transition: color 0.1s ease-in-out;
 }

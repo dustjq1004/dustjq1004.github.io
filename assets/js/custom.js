@@ -32,7 +32,7 @@ $(document).ready(function() {
 $('#sidebar-nav').scroll(function() {
     var container = $(this);
     var containerHeight = container.height();
-    console.log($('#sidebar-nav').scrollTop());
+
     $('.nav-scroll').each(function() {
         var element = $(this);
         var elementOffset = element.offset().top - container.offset().top;
@@ -70,7 +70,6 @@ $(window).on('beforeunload', function() {
   
 $(window).on('load', function() {
     var scrollPosition = localStorage.getItem('scrollPosition');
-    console.log(`scrollPosition: ${scrollPosition}`);
     if (scrollPosition) {
         $('#sidebar-nav').scrollTop(scrollPosition);
         localStorage.removeItem('scrollPosition');
