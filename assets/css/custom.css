@@ -1,8 +1,19 @@
-
+body {
+    font-size: 1rem;
+    letter-spacing: 0.015rem;
+}
 a {
-    transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
+h1, h2, h3, h4 {
+    margin-top: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin: 1rem 0;
+}
 /*
 ********************************
 sidebar css styles
@@ -10,67 +21,69 @@ sidebar css styles
 */
 
 .side-items {
-    position: fixed;
-    left: 10px;
-    top: 60px;
-    z-index: 1;
+  position: fixed;
+  left: 10px;
+  top: 60px;
+  z-index: 1;
 }
 
 .side-items a {
-    color: black;
+  color: black;
 }
 
 /* sidebar - tags */
 
 .sidebar-tags {
-    position: fixed;
-    left: 50px;
-    top: 31%;
-    z-index: 1;
+  position: fixed;
+  left: 50px;
+  top: 31%;
+  z-index: 1;
 }
 
 .sidebar-tags h4 {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .sidebar-nav {
-    height: 160px;
-    overflow: scroll;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  height: 160px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .sidebar-nav::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera*/
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 .nav-item a {
-    color: black;
+  color: black;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 1200px) {
-    .sidebar-tags {display: none;}
+  .sidebar-tags {
+    display: none;
+  }
 }
 
 /* bootstrap nav-link custom */
 
 .nav-scroll {
-    opacity: 0.4;
-    font-size: 1.2rem;
-    transition: opacity 0.3s ease-in-out;
+  opacity: 0.4;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .nav-scroll:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .nav-scroll.selected {
-    opacity: 1;
+  opacity: 1;
 }
 
 /*
@@ -80,11 +93,159 @@ content css styles
 */
 
 .content {
-    margin: 0 auto;
-    max-width: 1000px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
+/* header */
 
+.intro-header .page-heading .page-subheading,
+.intro-header .post-heading .post-subheading {
+  font-size: 1rem;
+}
+
+/* blockquote */
+.blog-post blockquote {
+  padding: 0.625rem 1.25rem;
+  margin: 0 0 1.25rem;
+  font-size: 1.1rem;
+  border-left: none;
+  background: #fae6e6;
+  border-radius: 5px;
+}
+
+blockquote {
+  color: #808080;
+  font-style: normal;
+}
+
+/* table style */
+table {
+  /* margin: auto; */
+  /* min-width: 300px; */
+  /* max-width: 100%; */
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+table thead tr {
+  border-top: none;
+  background: #428bca;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
+}
+
+table tr:nth-child(odd):not(:first-child) {
+  background-color: #ebf3f9;
+}
+
+table td {
+  display: block;
+  font-size: 1rem;
+}
+
+table td:first-child {
+  margin-top: 0.5em;
+}
+
+table td:last-child {
+  margin-bottom: 0.5em;
+}
+
+table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 120px;
+  display: inline-block;
+  color: #000;
+}
+
+table th,
+table td {
+  text-align: left;
+}
+
+table {
+  color: #333;
+  border-radius: 0.4em;
+  overflow: hidden;
+}
+
+table tr {
+  border-color: #bfbfbf;
+}
+
+table th,
+table td {
+  padding: 0.5em 1em;
+}
+
+@media screen and (max-width: 601px) {
+  table tr:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  table tr:hover:not(:first-child) {
+    background-color: #d8e7f3;
+  }
+  table td:before {
+    display: none;
+  }
+  table th,
+  table td {
+    display: table-cell;
+    padding: 0.25em 0.5em;
+  }
+  table th:first-child,
+  table td:first-child {
+    padding-left: 0;
+  }
+  table th:last-child,
+  table td:last-child {
+    padding-right: 0;
+  }
+  table th,
+  table td {
+    padding: 0.6em !important;
+  }
+}
+
+@-webkit-keyframes leftRight {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(-10px);
+  }
+  75% {
+    -webkit-transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes leftRight {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 /*
 ********************************
@@ -93,5 +254,5 @@ footer css styles
 */
 
 footer a {
-    transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
 }

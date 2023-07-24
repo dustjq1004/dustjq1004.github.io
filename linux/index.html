@@ -1,7 +1,7 @@
 ---
 layout: page
 title: linux
-subtitle: centOs, ubuntu
+subtitle: 포스팅 예시
 categoris: linux
 ---
 
@@ -12,7 +12,13 @@ categoris: linux
 <ul class="posts-list list-unstyled" role="list">
   {% for post in posts %}
     {% if post.categories[0] == "linux" %}
-      <li class="post-preview">
+      <li class="post-preview"
+      {% if post.tags %}
+        {% for tag in post.tags %}
+          data-{{ tag }}
+        {% endfor %}
+      {% endif %}
+      >
         <article>
 
           {%- capture thumbnail -%}

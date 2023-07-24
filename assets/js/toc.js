@@ -11,23 +11,26 @@ toc?.addEventListener('click', e => {
     if (e.target.matches('.toc-title')) {
         tocItems.forEach(target => target.classList.remove('toc-active'));
         tocItems[e.target.dataset.index].classList.add('toc-active');
-        tags[e.target.dataset.index].scrollIntoView({ behavior: "smooth", block: "center"});
+        tags[e.target.dataset.index].scrollIntoView({ behavior: "smooth", block: "start"});
     }
 });
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            tocItems[selectedIndex].classList.remove('toc-active');
-            selectedIndex = entry.target.dataset.index;
-            tocItems[selectedIndex].classList.add('toc-active');
-            
-            if(entry.target.dataset.index > 0 && entry.intersectionRatio < 0.3) {
+            let top = entry.intersectionRect.top;
+            if(top < 300) {
                 tocItems[selectedIndex].classList.remove('toc-active');
-                selectedIndex = Number(entry.target.dataset.index) - 1;
+                selectedIndex = entry.target.dataset.index;
                 tocItems[selectedIndex].classList.add('toc-active');
+            } else {
+                tocItems[selectedIndex].classList.remove('toc-active');
+                // selectedIndex = entry.target.dataset.index - 1;
+                // tocItems[selectedIndex].classList.add('toc-active');
             }
-        } 
+        } else {
+            tocItems[selectedIndex].classList.remove('toc-active');
+        }
     })
 }, options);
 
