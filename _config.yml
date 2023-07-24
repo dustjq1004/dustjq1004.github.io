@@ -25,7 +25,7 @@ navbar-links:
   - Javascript: "js"
   - c언어: "clang"
   - linux: "linux"
-  - 샘플: "sample"
+  # - 샘플: "sample"
 
 ################
 # --- Logo --- #
