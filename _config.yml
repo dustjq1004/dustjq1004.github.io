@@ -22,9 +22,11 @@ author: YeonSup Kim
 navbar-links:
   About Me: "aboutme"
   블로그:
-  - Javascript: "js"
-  - c언어: "clang"
+  # - Javascript: "js"
+  # - c언어: "clang"
+  - java: "java"
   - linux: "linux"
+  - algorithm: "algo"
   # - 샘플: "sample"
 
 ################

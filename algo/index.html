@@ -1,8 +1,8 @@
 ---
 layout: page
-title: linux
+title: Algorithm
 subtitle: 
-categoris: linux
+categoris: algo
 ---
 
 {% assign posts = paginator.posts | default: site.posts %}
@@ -11,7 +11,7 @@ categoris: linux
 
 <ul class="posts-list list-unstyled" role="list">
   {% for post in posts %}
-    {% if post.categories[0] == "linux" %}
+    {% if post.categories[0] == "algorithm" %}
       <li class="post-preview"
       {% if post.tags %}
         {% for tag in post.tags %}
