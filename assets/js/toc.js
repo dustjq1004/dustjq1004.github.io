@@ -2,7 +2,7 @@ const toc = document.querySelector('.toc');
 const tocItems = document.querySelectorAll('.toc-title');
 const options = {threshold: [0, 0.25, 0.5, 0.75, 1]}
 let selectedIndex = 0
-let tags = document.querySelectorAll('.blog-post h2, .blog-post h3');
+let tags = document.querySelectorAll('.blog-post h2, .blog-post h3, .blog-post h4');
 tocItems.forEach((item, index) => item.dataset.index = index);
 tags.forEach((tag, index) => tag.dataset.index = index);
 
@@ -26,9 +26,11 @@ $(window).scroll(function() {
             selectedIndex = header.dataset.index;
             tocItems[selectedIndex].classList.add('toc-active');
             // $(`.toc-title[data-index=${index}]`).addClass('toc-active');
+
         } else {
             // 해당 섹션이 보이지 않는 경우 목차에서 해당 링크 강조 제거
-            $(`.toc-title[data-index=${index}]`).removeClass('toc-active'); 
+            tocItems[header.dataset.index].classList.remove('toc-active');
+            // $(`.toc-title[data-index=${index}]`).removeClass('toc-active');
         }
     });
   });
