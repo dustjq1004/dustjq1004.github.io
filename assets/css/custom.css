@@ -9,7 +9,7 @@ a {
 
 .container-md h1, .container-md h2, .container-md h3, .container-md h4 {
     margin-top: 2.3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 p {
@@ -25,7 +25,21 @@ img {
 ul {
   list-style-type: disc;
   list-style-position: inside;
-  margin: 10px 0;
+  padding-left: 1rem;
+}
+
+hr {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.blog-post hr {
+  max-width: 33%;
+  border-width: 0.25rem;
+  border-radius: 0.1875rem;
+  border-color: #6c757d;
 }
 /*
 ********************************
