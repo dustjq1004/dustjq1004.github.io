@@ -197,19 +197,19 @@ class ArrayDeque {
 }
 ```
 
-#### removeFirst 메서드
+**removeFirst 메서드**  
 removeFirst 메서드는 pollFirst를 내부에서 호출한다. 그리고 pollFirst 메서드가 반환한 값이 null이라면, NoSuchElementException 예외를 던진다.
 
-#### pollFirst 메서드
+**pollFirst 메서드**  
 pollFirst는 elementAt으로 head의 값을 가져오고 head를 null처리 하여 삭제를 한다.
 
-#### getFirst 메서드
+**getFirst 메서드**  
 getFirst는 elementAt 메서드를 호출하고 그 값을 반환한다.
 
-#### 기타 메서드
+**기타 메서드**  
 다른 last메서들들도 이러한 구조로 되어있고, add 또는 offer, remove메서들도 내부적으로 같은 메서드를 사용한다.
 
-#### 시간 복잡도
+**시간 복잡도**
 - 추가, 삭제 : O(1)
 - 탐색 : O(1)
 
@@ -218,8 +218,9 @@ getFirst는 elementAt 메서드를 호출하고 그 값을 반환한다.
 그래서 기본적인 추가,삭제,탐색 기능은 시간 복잡도가 상수 시간을 가진다. 물론, 기존 배열의 크기를 늘려야할 때는 복잡도가 증가하기는 한다. 하지만 대부분의 시간은 상수 시간이다.
 
 ArrayDeque는 Stack, queue의 기능을 가지고 있고, 성능이 좋기 때문에 Queue 또는 Stack을 대신해 사용한다. 하지만, 멀티 스레드 환경을 지원하지 않는 단점 또한 존재한다.
-그리고 자료구조는 상황에 맞게 알맞은 것이 있다. ArrayDeque도 어떤 환경에서는 좋지 않은 퍼포먼스를 보이기 때문에 자바 자료구조 마다 특성을 잘 알고 사용하면 좋다.
-그렇기 때문에 다음 구현체인 **LinkedList**는 다음 포스팅에서 알아볼 것 이다.
+그래서 자료구조는 상황에 따라서 알맞은 것을 찾아서 사용하면 좋다. ArrayDeque도 어떤 환경에서는 좋지 않은 퍼포먼스를 보이기 때문에 자바 자료구조 마다 특성을 잘 알고 사용해야 한다.
+
+또 다른 구현체인 **LinkedList**는 다음 포스팅에서 알아볼 것이다.
 
 
 
