@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 자바의 Deque
-subtitle: 자바 자료구조 분석 - Deque
+subtitle: 자바 자료구조 분석 - Deque (1)
 # cover-img: /assets/img/path.jpg
 # thumbnail-img: /assets/img/thumb.png
 # share-img: /assets/img/path.jpg
