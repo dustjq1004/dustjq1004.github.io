@@ -26,6 +26,7 @@ navbar-links:
   # - c언어: "clang"
   - java: "java"
   - linux: "linux"
+  - 부트캠프: "bootcamp"
 #  - algorithm: "algo"
   # - 샘플: "sample"
 
