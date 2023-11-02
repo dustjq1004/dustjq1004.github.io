@@ -2,6 +2,7 @@
 layout: post
 title: 우아한 테크 코스 - 프리코스 1,2주차 회고
 subtitle: 1,2주차 미션 - 숫자 야구, 레이싱카
+#cover-img: /assets/img/posts/2023-11-01-woo-precourse-1-picture-1.png
 thumbnail-img: /assets/img/posts/2023-11-01-woo-precourse-1-picture-1.png
 #share-img: /assets/img/posts/path.jpg
 #gh-repo: https://github.com/dustjq1004/java-racingcar-6
