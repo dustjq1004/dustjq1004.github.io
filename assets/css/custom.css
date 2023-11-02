@@ -135,6 +135,16 @@ content css styles
   font-size: 1rem;
 }
 
+
+.intro-header.big-img {
+  background: no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  min-height: 9.5rem;
+  margin-bottom: 4rem;
+}
+
 /* blockquote */
 .blog-post blockquote {
   padding: 0.625rem 1.25rem;

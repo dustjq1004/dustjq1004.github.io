@@ -43,6 +43,19 @@ layout: base
       {% endif %}
       
       <article role="main" class="blog-post">
+        {% if page.cover-img %}
+        <div class="big-img intro-header">
+          <div class="container-md">
+            <div class="row">
+              <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 mb-3">
+                <div class="{{ include.type }}-heading">
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class='img-desc'></span>
+        </div>
+        {% endif %}
         {{ content }}
       </article>
 
