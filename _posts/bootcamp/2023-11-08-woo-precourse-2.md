@@ -47,7 +47,7 @@ categories: bootcamp
 어느 순간 하드코딩을 하고 있는 모습을 본다. 그래도 이번에 하드코딩을 없애는 새로운 방법을 배우고, 좋지 않은 이유를 다시 한번 느꼈다.
 
 그리고 `java 상수`를 키워드로 구글링 하다 발견한 내용이 있다. 
-- https://www.slipp.net/questions/174
+- [https://www.slipp.net/questions/174](https://www.slipp.net/questions/174)
 
 위에 사이트에서 누가 상수처리에 대해서 질문을 했고, 다양한 답변이 달려 있었다. 답변 달아주신 분들 중에 익숙한 닉네임도 있다.
 요약한 내용은 다음과 같다.
@@ -62,7 +62,7 @@ categories: bootcamp
 
 그리고 다음은 enum을 공부하다 발견한 사이트다. 유명한 이동욱님이 okky에 올리신 글이다.
 enum 클래스 활용사례에 대한 글인데, 댓글이 많이 달렸었다.
-- https://okky.kr/articles/384729
+- [https://okky.kr/articles/384729](https://okky.kr/articles/384729)
 
 3. 공통 코드를 처리하는 방법
    - 테이블에서 코드를 관리를 한다.
@@ -124,7 +124,7 @@ class WiningNumbersTest {
 #### 1. enum 클래스 사용
 enum 클래스를 공부하면서 상수에 대해서도 같이 공부했다. enum에 사용방법과 emum을 사용하는 이유를 블로그에 포스팅을 했다.
 상수에 대한 글은 아직 없는데 enum을 먼저 공부하게 됐다. 프리코스 후에 상수에 대한 글을 작성할 예정이다.
-- [자바 enum 사용하기](..%2Fjava%2F2023-11-06-java-enum-1.md)
+- [자바 enum 사용하기](https://dustjq1004.github.io/java/2023-11-06-java-enum-1/)
 
 enum 사용해본 경험이 거의 없다. 처음 개발할 때 잠깐 공부했던 기억에서는 enum이 어려웠다. 전 회사에서는 상수 클래스를 사용한 흔적이 전혀 없었다. 공통 코드들은 모두 DB에 들어가 있고,
 대부분 하드 코딩이거나 지역 변수에 있었다. 지금 생각해보면 정말 읽기 힘든 코드들이다. 그리고 나 또한 그렇게 작성하고 있었다. 아직 사용 경험을 더 해야하지만, 다시 공부하니 enum 활용에 대해서 좋은 점을 많이 배웠다.
@@ -202,7 +202,7 @@ public class Lotto {
 
 
 그리고 일급 컬렉션은 객체지향 생활에 있는 원칙 중 하나다. 그래서 객체지향 생활 원칙을 같이 공부 했다. 더 자세하게 알고 싶어서 위해 책을 구매했다.
-- [객체 지향 생활 체조 알아보기](..%2Fjava%2F2023-11-06-java-live-templates-for-object-calisthenics-1.md)
+- [객체 지향 생활 체조 알아보기](https://dustjq1004.github.io/java/2023-11-06-java-live-templates-for-object-calisthenics-1/)
 
 일급 컬렉션 관련 글은 아직 작성하는 중이다. 다음 미션을 하면서 작성을 마무리할 예정이다.
 
