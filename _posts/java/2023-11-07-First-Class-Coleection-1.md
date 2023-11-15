@@ -161,4 +161,4 @@ class Participants {
 ## 참고
 - [https://lsj8367.tistory.com/m/entry/%EC%9D%BC%EA%B8%89-%EC%BB%AC%EB%A0%89%EC%85%98](https://lsj8367.tistory.com/m/entry/%EC%9D%BC%EA%B8%89-%EC%BB%AC%EB%A0%89%EC%85%98)
 - [https://pomo0703.tistory.com/13](https://pomo0703.tistory.com/13)
-- [일급 컬렉션을 황용해야 하는 이유](https://velog.io/@alsgus92/%EC%9D%BC%EA%B8%89-%EC%BB%AC%EB%A0%89%EC%85%98%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0)
+- [일급 컬렉션을 활용해야 하는 이유](https://velog.io/@alsgus92/%EC%9D%BC%EA%B8%89-%EC%BB%AC%EB%A0%89%EC%85%98%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0)
