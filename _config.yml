@@ -25,8 +25,10 @@ navbar-links:
   # - Javascript: "js"
   # - c언어: "clang"
   - java: "java"
+#  - server : "server"
   - linux: "linux"
   - 부트캠프: "bootcamp"
+  - 협업 : "colab"
 #  - algorithm: "algo"
   # - 샘플: "sample"
 
@@ -161,6 +163,7 @@ footer-hover-col-dark: "#0085A1"
 #navbar-img: "/assets/img/bgimage.png"
 #footer-img: "/assets/img/bgimage.png"
 #page-img: "/assets/img/bgimage.png"
+resume-img: "/assets/img/me.jpeg"
 
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
 #mobile-theme-col: "#0085A1"
