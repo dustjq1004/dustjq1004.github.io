@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring Web exception - Name of argument type [java.lang.Long]
-subtitle: Deprecated 된 메서드 대응하기
+subtitle: Name of argument exception 원인 및 해결
 # cover-img: /assets/img/path.jpg
 # thumbnail-img: /assets/img/thumb.png
 # share-img: /assets/img/path.jpg
