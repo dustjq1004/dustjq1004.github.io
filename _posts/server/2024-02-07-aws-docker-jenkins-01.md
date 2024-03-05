@@ -13,13 +13,14 @@ categories: server
 
 ## AWS EC2 인스턴스 생성하기
 회원가입시 최초 1년간 무료 프리티어 사용가능
+
 > 주의! 요금 부과가 싫다면 EC2 생성시 public IPv4가 할당되지 않게 설정해야한다.
 > 자동으로 IPv4 할당되게 체크가 되어있으니 확인 후 진행할 것
 
 1. 인스턴스 시작하기
 2. 인스턴스 생성 정보 폼 작성
     - Name : 인스턴스 이름 (임의 작성)
-    - **Application and OS Images (Amazon Machine Image)**
+    - Application and OS Images (Amazon Machine Image)
         - Ubuntu로 진행
     - 인스턴스 유형 : t2.micro
         - Jenkins 설정 및 빌드시 부하로 인해 문제 발생 가능
@@ -40,20 +41,21 @@ categories: server
 
 - docker는 경로와 상관없이 사용가능
 
-**홈페이지 다운로드**
+#### 홈페이지 다운로드
 
 1. 웹사이트 접속 후 `Docker Desktop for Mac with Apple silicon` (M1 or M2 일 경우) 버튼 클릭
-    - https://docs.docker.com/desktop/install/mac-install/
-2. .dmg 설치 후 실행
+    - [https://docs.docker.com/desktop/install/mac-install/](https://docs.docker.com/desktop/install/mac-install/)
+2. `.dmg` 설치 후 실행
 3. 회원가입 후 로그인
     1. Docker 앱에서 로그인
     2. 명령어 로그인
 
-**명령어 로그인**
+#### 명령어 로그인
 
 1. `docker login`
 2. username, password 입력
    - username : 회원가입할 때 입력했던 정보, 우측 상단 프로필 클릭하면 나옴
+
 ![2024-02-07-aws-docker-jenkins-01-picture-01.png](..%2F..%2Fassets%2Fimg%2Fposts%2F2024-02-07-aws-docker-jenkins-01-picture-01.png)
 
 **구글일 경우 비밀번호 설정하기 (비밀번호 모를 경우)**
@@ -64,13 +66,12 @@ categories: server
 
 **도커 명령어 간단히 알아보기**
 
-`docker ps` : 실행 중인 docker container 목록을 보여준다.
-
+`docker ps` : 실행 중인 docker container 목록을 보여준다.  
 `docker images` : 현재 local에 있는 도커 이미지들을 보여준다.
 
 ### 2. Docker 이미지 Build와 Docker Repository에 Push
 
-**Dockerfile 작성하기**
+#### Dockerfile 작성하기
 
 Dockerfile은 Docker 에서 이미지를 생성하기 위한 용도로 작성하는 파일이다.
 
@@ -95,31 +96,28 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 - ENTRYPOINT : 컨테이너 시작시 실행될 command를 지정한다. shell, exec형태의 command가 가능
 - ARG는 변수 선언 키워드다. `ARG 변수명=값` 형태로 변수 지정해서 사용 가능
 
-**Docker image build**
+#### Docker image build
 
-`docker build -t {본인 dockerhub ID}/{dockerHub 레포지토리 name} .` → **도커 설치와 로그인 후 사용**
-
-- 해당 명령어를 실행하면 도커가 Dockerfile을 읽고 이미지를 local에 만든다.
+```jsx
+`docker build -t {본인 dockerhub ID}/{dockerHub 레포지토리 name} .`
+# → 도커 설치와 로그인 후 사용
+# - 해당 명령어를 실행하면 도커가 Dockerfile을 읽고 이미지를 local에 만든다.
 
 `docker images`
-
-- 만들어진 이미지들 확인 가능
+# - 만들어진 이미지들 확인 가능
 
 `docker push {본인 dockerhub ID}/{dockerHub 레포지토리 name}`
-
-- 도커 이미지를 도커 원격 서버 저장소에 push한다. 깃허브와 유사한 것을 볼 수 있다.
+# - 도커 이미지를 도커 원격 서버 저장소에 push한다. 깃허브와 유사한 것을 볼 수 있다.
 
 `docker run -p 8080:8080 mooh2jj/docker-jenkins-github-test`
-
-- 도커를 실행. port=8080, `mooh2jj/docker-jenkins-github-test` 에 있는 최신 이미지 실행
+# - 도커를 실행. port=8080, `mooh2jj/docker-jenkins-github-test` 에 있는 최신 이미지 실행
 
 `nohup run -p 8080:8080 mooh2jj/docker-jenkins-github-test 2>&1 &`
-
-- nohup은 사용자 세션이 종료되도 종료되지 않게 백그라운드 실행
+# - nohup은 사용자 세션이 종료되도 종료되지 않게 백그라운드 실행
 
 `docker ps`
-
-- 컨테이너 실행 상태를 볼 수 있다.
+# - 컨테이너 실행 상태를 볼 수 있다.
+```
 
 <aside>
 💡 도커 이미지 만들 때 주의
@@ -130,11 +128,10 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 ### 3. Docker로 웹서버 실행하기 (AWS EC2 - Ubuntu)
 
-**순서**
-
-1. EC2내에 Docker 설치하기
-2. Docker login 하기
-3. 도커 컨테이너 실행  
+> **순서**
+> 1. EC2내에 Docker 설치하기
+> 2. Docker login 하기
+> 3. 도커 컨테이너 실행  
 
 #### 1. **EC2내 Docker 설치하기**
 
@@ -161,9 +158,9 @@ docker --version
 
 #### 2. **Docker login**
 
-`docker login` 명령어 입력
+- `docker login` 명령어 입력
 
-<p style="color:red;">docker sock access permission denied 문제 해결</p>
+> docker sock access permission denied 문제 해결
 
 ```
 # 1) user 그룹 추가 
