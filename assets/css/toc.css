@@ -3,8 +3,9 @@ layout: null
 ---
 
 #toc {
-  position: fixed; 
+  position: fixed;
   right: 0;
+  top: 30%;
 }
 
 
@@ -15,7 +16,6 @@ layout: null
 
 .toc {
   position: relative;
-  right: 0px;
   width: 240px;
   color: black;
   overflow-y: auto;
@@ -45,8 +45,8 @@ layout: null
 }
 
 a.toc-active {
-  font-weight: bold; 
-  transition: all 0.125s ease-in 0s; 
+  font-weight: bold;
+  transition: all 0.125s ease-in 0s;
   font-size: 1.15rem;
   color: {{ site.toc-hover-col }};
 }
@@ -55,10 +55,6 @@ ul {
   list-style-type: none;
   margin-bottom: 0.1rem;
   padding-left: 0rem;
-}
-
-li {
-  padding-left: 0.5rem;
 }
 
 .toc a {
@@ -70,7 +66,7 @@ li {
     text-decoration: none;
     width: 100%;
 }
- 
+
 .toc a:hover {
   /* background-color: #f8c8c8; */
   color: {{ site.toc-hover-col }};
