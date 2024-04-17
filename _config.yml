@@ -29,6 +29,7 @@ navbar-links:
   - linux: "linux"
   - 부트캠프: "bootcamp"
   - 협업 : "colab"
+  - cs : "CS"
 #  - algorithm: "algo"
   # - 샘플: "sample"
 
