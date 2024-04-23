@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 메모리 관리
+title: 메모리 관리 (1)
 subtitle: 가상 메모리 관리, 메모리 연속 할당, 메모리 비연속 할당
 # cover-img: /assets/img/path.jpg
 # thumbnail-img: /assets/img/thumb.png
